@@ -23,7 +23,7 @@
     "dev": "encore dev",
     "watch": "encore dev --watch",
     "build": "encore production --progress",
-    "heroku-postbuild": "encore production --progress && bin/console doctrine:schema:update --force && bin/console doctrine:fixtures:load -n"
+    "heroku-postbuild": "bin/console doctrine:schema:update --force --env=dev && bin/console doctrine:fixtures:load -n --env=dev && encore production --progress"
   },
   "dependencies": {
     "bootstrap": "^4.2.1",
