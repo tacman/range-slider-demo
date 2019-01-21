@@ -3,8 +3,8 @@
   "description": "Integrating a jquery-ui plug (range slider) in the Symfony Demo",
   "success_url": "/",
   "env": {
-    "APP_ENV": "prod",
-    "APP_SECRET": "abc",
+    "APP_ENV": "dev",
+    "APP_SECRET": "abc"
   },
 
   "buildpacks": [
