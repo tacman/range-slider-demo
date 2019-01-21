@@ -1,30 +1,40 @@
-Symfony Demo Application
-========================
+Symfony Demo With RangeSlider
+=============================
 
 The "Symfony Demo Application" is a reference application created to show how
-to develop applications following the [Symfony Best Practices][1].
+to develop applications following the [Symfony Best Practices][1].  This fork demonstrates using jqueryUI
+and jqrangeslider.  At the moment, it is not working.
 
-Requirements
-------------
+The only difference between the symfony demo and this repo is adding the slider, via the following changes
 
-  * PHP 7.1.3 or higher;
-  * PDO-SQLite PHP extension enabled;
-  * and the [usual Symfony application requirements][2].
+```bash
+# this was run and now included in package.json
+yarn add jquery-ui jqrangeslider
+
+```
+
+```html
+# added to admin/blog/index.html
+        <div id="slider">Slider Placeholder</div>
+```
+
+```javascript
+# added to assets/js/app.js
+import 'jquery-ui';
+import 'jqrangeslider';
+
+
+$('#slider').dateRangeSlider();
+```
 
 Installation
 ------------
 
-Install the [Symfony client][4] binary and run this command:
-
-```bash
-$ symfony new --demo my_project
-```
-
-Alternatively, you can use Composer:
-
-```bash
-$ composer create-project symfony/symfony-demo my_project
-```
+    git clone git@github.com:tacman/range-slider-demo.git
+    cd range-slider-demo
+    yarn install
+    yarn run encore dev
+    
 
 Usage
 -----
@@ -34,25 +44,18 @@ installed the [Symfony client][4] binary, run this command to run the built-in
 web server and access the application in your browser at <http://localhost:8000>:
 
 ```bash
-$ cd my_project/
+$ cd range-slider-demo
 $ symfony serve
 ```
 
-If you don't have the Symfony client installed, run `php bin/console server:run`.
-Alternatively, you can [configure a web server][3] like Nginx or Apache to run
-the application.
+Problem
+-------
 
-Tests
------
+Navigate to the administration site http://127.0.0.1:8000/en/admin/post/
 
-Execute this command to run tests:
+Open the browser debugger
 
-```bash
-$ cd my_project/
-$ ./bin/phpunit
+```
+TypeError: $(...).dateRangeSlider is not a function[Learn More] admin.22dc4073.js line 11 > eval:21:16
 ```
 
-[1]: https://symfony.com/doc/current/best_practices/index.html
-[2]: https://symfony.com/doc/current/reference/requirements.html
-[3]: https://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html
-[4]: https://symfony.com/download

@@ -1,9 +1,14 @@
 import 'eonasdan-bootstrap-datetimepicker';
 import 'typeahead.js';
+import 'jquery-ui';
+import 'jqrangeslider';
 import Bloodhound from "bloodhound-js";
 import 'bootstrap-tagsinput';
 
 $(function() {
+
+    $('#slider').dateRangeSlider();
+
     // Datetime picker initialization.
     // See http://eonasdan.github.io/bootstrap-datetimepicker/
     $('[data-toggle="datetimepicker"]').datetimepicker({
