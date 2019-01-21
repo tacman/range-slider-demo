@@ -12,6 +12,7 @@
         "ezyang/htmlpurifier": "^4.9",
         "sensio/framework-extra-bundle": "^5.1",
         "sensiolabs/security-checker": "^5.0",
+        "sentry/sentry-symfony": "^2.2",
         "symfony/asset": "4.2.*",
         "symfony/console": "4.2.*",
         "symfony/dotenv": "4.2.*",
