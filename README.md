@@ -8,18 +8,18 @@ and jqrangeslider.  At the moment, it is not working.
 The only difference between the symfony demo and this repo is adding the slider, via the following changes
 
 ```bash
-# this was run and now included in package.json
+# add the libraries to package.json
 yarn add jquery-ui jqrangeslider
 
 ```
 
 ```html
-# added to admin/blog/index.html
+# added to /blog/search.html
         <div id="slider">Slider Placeholder</div>
 ```
 
 ```javascript
-# added to assets/js/app.js
+# added to assets/js/search.js
 import 'jquery-ui';
 import 'jqrangeslider';
 
@@ -51,7 +51,7 @@ $ symfony serve
 Problem
 -------
 
-Navigate to the administration site http://127.0.0.1:8000/en/admin/post/
+Navigate to the administration site http://127.0.0.1:8000/en/blog/search
 
 Open the browser debugger
 
